@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Save Our Ship 2</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/TerrainDef[defName="EmptySpace"]/statBases</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/TerrainDef[defName="EmptySpace"]</xpath>
+						<value>
+							<statBases>
+								<pathCostSpaceWalk>1</pathCostSpaceWalk>
+							</statBases>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/TerrainDef[defName="EmptySpace"]/statBases</xpath>
+						<value>
+							<pathCostSpaceWalk>1</pathCostSpaceWalk>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/TerrainDef[defName="EmptySpace"]</xpath>
+					<value>
+						<li Class="TerrainMovement.TerrainMovementStatDef">
+							<pawnSpeedStat>SpaceWalk</pawnSpeedStat>
+							<terrainPathCostStat>pathCostSpaceWalk</terrainPathCostStat>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

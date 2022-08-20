@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ApparelBase">
+    <defName>Apparel_MMU</defName>
+    <label>Manned Maneuvering Unit</label>
+    <description>A manned maneuvering unit for faster eva travel.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ShipSpaceSuits</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Plasteel>15</Plasteel>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/MMU/MMU</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>17000</WorkToMake>
+      <Mass>23</Mass>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-2</MoveSpeed>
+      <SpaceWalk>6</SpaceWalk>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0.15</generateAllowChance>
+    <apparel>
+     <wornGraphicPath>Things/Apparel/MMU/MMU</wornGraphicPath>
+     <useWornGraphicMask>true</useWornGraphicMask>
+     <careIfWornByCorpse>false</careIfWornByCorpse>
+     <countsAsClothingForNudity>false</countsAsClothingForNudity>
+     <careIfDamaged>false</careIfDamaged>
+     <bodyPartGroups>
+      <li>Torso</li>
+    </bodyPartGroups>
+    <layers>
+      <li>Belt</li>
+    </layers>
+    <tags>
+      <li>VAEA_Utility_Spacer</li>
+      <li>Spacer</li>
+      <li>EVA</li>
+    </tags>
+    <wornGraphicData>
+      <renderUtilityAsPack>true</renderUtilityAsPack>
+      <north>
+        <offset>(0.0,0.0)</offset>
+        <hulk><offset>(0.0,0.0)</offset></hulk>
+        <fat><offset>(0.0,0.0)</offset></fat>
+        <thin><offset>(0.0,0.0)</offset></thin>
+      </north>
+      <south>
+        <offset>(0.0,0.0)</offset>
+        <female><offset>(0.0,0.0)</offset> </female>
+        <hulk><offset>(0.0,0.0)</offset></hulk>
+        <fat><offset>(0.0,0.0)</offset></fat>
+        <thin><offset>(0.0,0.0)</offset></thin>
+      </south>
+      <east>
+        <offset>(-0.3,0.0)</offset>
+        <hulk><offset>(0.0,0.0)</offset></hulk>
+        <fat><offset>(0.0,0.0)</offset></fat>
+        <thin><offset>(0.0,0.0)</offset></thin>
+      </east>
+      <west>
+        <offset>(0.3,0.0)</offset>
+        <hulk><offset>(0.0,0.0)</offset></hulk>
+        <fat><offset>(0.0,0.0)</offset></fat>
+        <thin><offset>(0.0,0.0)</offset></thin>
+      </west>
+      <male> <scale>(1.0,1.0)</scale></male>
+      <female><scale>(1.0,1.0)</scale></female>
+      <thin><scale>(1.0,1.0)</scale></thin>
+      <hulk><scale>(1.0,1.0)</scale></hulk>
+      <fat> <scale>(1.0,1.0)</scale></fat>
+    </wornGraphicData>
+  </apparel>
+</ThingDef>
+</Defs>
