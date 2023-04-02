@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="ArmorMachineableBase">
     <defName>Apparel_MMU</defName>
     <label>Manned Maneuvering Unit</label>
     <description>A manned maneuvering unit for faster eva travel.</description>
     <techLevel>Spacer</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>ShipSpaceSuits</researchPrerequisite>
+      <researchPrerequisite>
+        <li>TransportPod</li>
+      </researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
       <recipeUsers Inherit="False">
         <li>FabricationBench</li>
       </recipeUsers>
@@ -45,6 +50,7 @@
      <careIfWornByCorpse>false</careIfWornByCorpse>
      <countsAsClothingForNudity>false</countsAsClothingForNudity>
      <careIfDamaged>false</careIfDamaged>
+     <useDeflectMetalEffect>true</useDeflectMetalEffect>
      <bodyPartGroups>
       <li>Torso</li>
     </bodyPartGroups>
@@ -83,11 +89,11 @@
         <fat><offset>(0.0,0.0)</offset></fat>
         <thin><offset>(0.0,0.0)</offset></thin>
       </west>
-      <male> <scale>(1.0,1.0)</scale></male>
+      <male><scale>(1.0,1.0)</scale></male>
       <female><scale>(1.0,1.0)</scale></female>
       <thin><scale>(1.0,1.0)</scale></thin>
       <hulk><scale>(1.0,1.0)</scale></hulk>
-      <fat> <scale>(1.0,1.0)</scale></fat>
+      <fat><scale>(1.0,1.0)</scale></fat>
     </wornGraphicData>
   </apparel>
 </ThingDef>
